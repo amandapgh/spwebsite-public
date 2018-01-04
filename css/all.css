@@ -393,7 +393,7 @@ template {
 h2 {
   font-size: 3em !important; }
 
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
   h1 {
     font-size: 5em !important; } }
 
@@ -401,7 +401,7 @@ h2 {
   h1 {
     font-size: 3em !important; } }
 
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
   h2,
   h3,
   h4 {
@@ -746,7 +746,7 @@ hr {
   .header .header__logo {
     height: 150px;
     margin-right: 2em; }
-    @media (max-width: 900px) {
+    @media (max-width: 1080px) {
       .header .header__logo {
         height: 75px;
         margin-right: 1em;
@@ -757,7 +757,7 @@ hr {
   display: flex !important;
   align-items: center !important;
   justify-content: center; }
-  @media (max-width: 900px) {
+  @media (max-width: 1080px) {
     #logo {
       flex-flow: column; } }
 
@@ -767,17 +767,17 @@ hr {
   position: fixed;
   top: 0;
   z-index: 1000;
-  justify-content: space-between;
   background-color: #b0f3cf;
   text-align: center; }
   #navbar a {
     color: #333;
     text-transform: uppercase;
-    padding: .5em .5em;
-    height: 100%; }
+    padding: 0.5em 2rem;
+    height: 100%;
+    font-size: 1.1em; }
     #navbar a:hover {
       background-color: #41e28c; }
-  @media (max-width: 900px) {
+  @media (max-width: 1080px) {
     #navbar {
       display: none; } }
 
@@ -810,7 +810,7 @@ hr {
   z-index: 1001;
   display: none;
   color: black; }
-  @media (max-width: 900px) {
+  @media (max-width: 1080px) {
     #hamburger {
       display: block; } }
   @media (max-width: 450px) {
@@ -864,7 +864,7 @@ h1 {
 
 #how-to {
   padding-top: 6rem; }
-  @media (max-width: 450px) {
+  @media (max-width: 1080px) {
     #how-to {
       padding-top: 0; } }
 
@@ -872,14 +872,14 @@ h1 {
   height: 60vw;
   position: relative;
   padding-top: 20%; }
-  @media (max-width: 900px) {
+  @media (max-width: 1080px) {
     .intro {
       height: auto;
       padding-top: 2rem; } }
 
 #modules {
   padding-top: 4rem; }
-  @media (max-width: 450px) {
+  @media (max-width: 1080px) {
     #modules {
       padding-top: 0; } }
 
@@ -901,7 +901,7 @@ h1 {
 
 .phat {
   padding: 10rem 4rem; }
-  @media (max-width: 450px) {
+  @media (max-width: 1080px) {
     .phat {
       padding: 0 2rem; } }
 
