@@ -919,8 +919,8 @@ h1 {
 
 .scroll-arrow {
   height: 30px;
-  position: absolute;
-  bottom: 50px; }
+  position: relative;
+  top: 5em; }
 
 hr {
   margin: .5em;
