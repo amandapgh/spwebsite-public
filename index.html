@@ -39,6 +39,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+
+  <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/dpleccoifgoflihlgpjlkeigjemckbgn">
 </head>
 
 <body>
@@ -48,7 +50,8 @@
       <a href="#pricing">Pricing</a>
       <a href="#how-to">How To Use</a>
       <a href="#contact">Contact</a>
-      <a href="https://chrome.google.com/webstore/detail/simple-posher/dpleccoifgoflihlgpjlkeigjemckbgn?authuser=1" onclick="ga('send', 'event', 'Clicked Chrome Store Link')">Install</a>
+      <a href="#" onclick="chrome.webstore.install()">Install</a>
+      <a href="https://chrome.google.com/webstore/detail/simple-posher/dpleccoifgoflihlgpjlkeigjemckbgn" onclick="ga('send', 'event', 'Clicked Chrome Store Link')">Install from Chrome Web Store</a>
   </nav>
 
   <a href="#" id="hamburger-popout">
@@ -112,9 +115,11 @@
         </h3>
 
         <span class="flex center">
-          <a href="https://chrome.google.com/webstore/detail/simple-posher/dpleccoifgoflihlgpjlkeigjemckbgn?authuser=1">
-            <button class="install">Click here to install the extension</button>
-          </a>
+            <button onclick="chrome.webstore.install()" id="install-button" class="install">Click here to install the extension</button>
+
+            <a href="https://chrome.google.com/webstore/detail/simple-posher/dpleccoifgoflihlgpjlkeigjemckbgn">
+              <button class="install">Install from Chrome Web Store</button>
+            </a>
         </span>
         <!-- <h3 class="bottom-padding">
           Simple Posher features the following modules:
