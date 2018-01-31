@@ -39,6 +39,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+  <script src="https://use.fontawesome.com/92578959dc.js"></script>
 
   <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/dpleccoifgoflihlgpjlkeigjemckbgn">
 </head>
@@ -47,11 +48,11 @@
   <nav class="l-full flex center" id="navbar">
       <a href="#intro">About</a>
       <a href="#modules">Features</a>
+      <a href="#demo">Demo</a>
       <a href="#pricing">Pricing</a>
-      <a href="#how-to">How To Use</a>
+      <a href="#how-to">How To Use & FAQ</a>
       <a href="#contact">Contact</a>
-      <a href="#" onclick="chrome.webstore.install()">Install</a>
-      <a href="https://chrome.google.com/webstore/detail/simple-posher/dpleccoifgoflihlgpjlkeigjemckbgn" onclick="ga('send', 'event', 'Clicked Chrome Store Link')">Install from Chrome Web Store</a>
+      <a href="https://chrome.google.com/webstore/detail/simple-posher/dpleccoifgoflihlgpjlkeigjemckbgn" onclick="ga('send', 'event', 'Clicked Chrome Store Link')">Install</a>
   </nav>
 
   <a href="#" id="hamburger-popout">
@@ -64,25 +65,26 @@
         <h2>Menu</h2>
       </a>
 
-      <hr>
       <a href="#intro">About</a>
       <hr>
       <a href="#modules">Features</a>
       <hr>
+      <a href="#demo">Demo</a>
+      <hr>
       <a href="#pricing">Pricing</a>
       <hr>
-      <a href="#how-to">How To Use</a>
+      <a href="#how-to">How To Use & FAQ</a>
       <hr>
       <a href="#contact">Contact</a>
       <hr>
       <a href="https://chrome.google.com/webstore/detail/simple-posher/dpleccoifgoflihlgpjlkeigjemckbgn?authuser=1">Install</a>
   </nav>
 
-  <div class="content l-container">
-    <div class="header l-full">
+  <div class="content">
+    <div class="header">
 
       <div id="logo">
-        <img class="header__logo" src="images/icon.png">
+        <img class="header__logo" src="images/hangericon.svg">
         <h1>Simple Posher</h1>
       </div>
 
@@ -98,10 +100,10 @@
     </div>
   </div>
 
-  <div class="content l-container" id="intro">
+  <div class="content l-container l-full phat" id="intro">
     <div class="l-full">
 
-      <div class="l-split intro">
+      <div>
         <h3 class="bottom-padding">
           Are you a Poshmark seller looking to increase sales but having a hard time
           balancing the many aspects of staying active on Posh? You’re not alone, and
@@ -115,21 +117,22 @@
         </h3>
 
         <span class="flex center">
-            <button onclick="chrome.webstore.install()" id="install-button" class="install">Click here to install the extension</button>
-
             <a href="https://chrome.google.com/webstore/detail/simple-posher/dpleccoifgoflihlgpjlkeigjemckbgn">
-              <button class="install">Install from Chrome Web Store</button>
+              <button class="install">Install Simple Posher Now</button>
             </a>
         </span>
         <!-- <h3 class="bottom-padding">
           Simple Posher features the following modules:
         </h3> -->
       </div>
+    </div>
+  </div>
 
+  <div class="content">
+    <div id="features" class="phat">
       <span class="l-full flex center" id="modules">
         <h1>Features</h1>
       </span>
-
         <div class="modules module">
           <div class="module l-container">
             <div class="flex vert-center l-short module--left">
@@ -225,9 +228,17 @@
             </div>
           </div>
         </div>
-      </div>
     </div>
-  </div>
+
+    <div class="content l-container l-full phat flex center" id="demo" >
+      <h1 class="l-full">Demo</h1>
+
+      <span class="flex center l-full">
+        <iframe width="1024" height="576" src="https://www.youtube.com/embed/QTBg9EA5wVM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </span>
+
+    </div>
+
 
   <div class="content l-container l-full phat flex center" id="pricing" >
     <h1 class="l-full">Pricing</h1>
@@ -248,7 +259,7 @@
     </span>
   </div>
 
-  <div class="content l-container l-full" id="how-to">
+  <div class="content l-container l-full phat" id="how-to">
     <h1 class="l-full">How to Use & FAQ</h1>
 
     <span class="flex vert-center l-full bottom-padding">
@@ -257,23 +268,59 @@
     </span>
 
     <span class="l-long content">
+
+      <span>
+        <h3>Updates 01/31/18:</h3>
+      </span>
+
       <span style="font-weight:bold;"class="margin-bottom">
         <p>
-          The extension works best in the background if you disable Chrome tab throttling, which is a Chrome feature that limits the activity
-          of inactive tabs to save memory. I recommend disabling this while you run the extension and re-enabling afterwards.
+          The extension no longer needs to scroll to load items! This means that all issues
+          related to the Item Sharer and Edit Sharer not loading all closet items when running in a
+          background tab are resolved, & the Auto Follower no longer needs all 1000 users to be loaded
+          in order to run!
+        </p>
+      </span>
+
+      <span style="font-weight:bold;"class="margin-bottom">
+        <p>
+          This means the extension now operates a little differently--by loading closets/followers
+          pages in segments rather than scrolling to load items. I chose to do it this way because
+          unfortunately, Chrome is unable to load infinite scroll items when a tab is not the active
+          tab--that is, the tab you are currently on.
+        </p>
+      </span>
+
+      <span style="font-weight:bold;"class="margin-bottom">
+        <p>
+          For current users, this just means that you don't have to scroll down and load an entire
+          closet before regular or edit sharing--you can navigate to any closet and start running Simple
+          Posher. Same goes for using the Auto Follower. Everything will work the same whether the tab is
+          the open tab or not. All how-to information below has been updated if you
+          would like more specifics.
+        </p>
+      </span>
+
+      <span style="font-weight:bold;" class="margin-bottom">
+        <p>
+          The extension still works best in the background if you disable Chrome tab throttling, which is a Chrome feature that slows down
+          background tabs to save memory. I recommend disabling this while you run the extension and re-enabling afterwards.
           <a class="margin-bottom" href="https://winaero.com/blog/disable-tab-throttling-google-chrome/">To learn how to do this, click here.</a>
         </p>
       </span>
-      <p>
-        Simple Posher works with items and users that it sees on the page. For example, if you are on the Poshmark homepage and there are 48 items visible, it can only share those 48 items. (If infinite share is checked, it will refresh the page after these 48 items are shared, and share the new items on the page).
-      </p>
-      <p>
-        If the item sharer is run from inside a closet, it will scroll down to load all items in the closet before it starts sharing. However, this ONLY WORKS if the tab that you are in is the active tab in the Chrome window. Therefore, if you would like to run Simple Posher in the background while browsing the web, you must keep Poshmark open in its own window, so it is the active/open tab in that window. If you don’t, the item sharer will still work, but it will not share your full closet if it is larger than 48 active listings.
-      </p>
-      <p>
-        This also applies to the ‘Scroll to Bottom’ button on the Auto-Follower; it can only scroll to load all followers if it is the active tab.
-      </p>
-    </span>
+
+      <div class="l-full flex center" id="how-to-nav">
+          <a href="#item-sharer">Item Sharer</a>
+          <a href="#edit-sharer">Edit Sharer</a>
+          <a href="#auto-follower">Auto Follower</a>
+          <a href="#feed-follower">Feed Follower</a>
+      </div>
+      <div class="l-full flex center" id="how-to-nav">
+          <a href="#auto-commenter">Commenter</a>
+          <a href="#activity-returner">Activity Returner</a>
+          <a href="#payment">Payment</a>
+          <a href="#other">General/Other</a>
+      </div>
 
     <div class="l-long content how-to-section modules margin-bottom" id="item-sharer">
 
@@ -294,12 +341,19 @@
           box next to ‘Randomize items.’ Otherwise, items will be shared in the order they appear.</li>
         <li>If you would like the item sharer to continuously run on the page, check the box next to ‘Infinite share.’</li>
         <li>Press ‘Start.’</li>
-        <li>If you are in a closet, the Item Sharer will scroll to the bottom of the page to load the full closet before sharing.</li>
-        <li>The Item Sharer will begin sharing items. </li>
+        <li>The Item Sharer will begin sharing items on the page.</li>
         <li>Items shared will be logged to the console window.</li>
-        <li>The item sharer will run on the page until it’s shared the number of items you’ve selected/all
-          items on the page if you did not enter a number.</li>
-        <li>If infinite share is checked, the sharer will refresh the page each time it is finished sharing all items on the page and continue sharing until you either press ‘Stop’ or a Captcha appears.</li>
+        <li>If there are more than 48 active listings in the closet (and you want to share your full closet,
+          or a greater number of items than 48), the item sharer will share all
+          items on the first page then navigate to the next segment of 48 items then share those. You will see that
+          URL changes to something like "poshmark.com/closet/username?max_id=289759283479.312" as it loads each
+          segment.
+        </li>
+        <li>The item sharer will continue sharing items from each segment of your closet
+           until it’s shared the number of items you’ve selected, or all of the
+          items in your closet if you did not enter a number.</li>
+        <li>If infinite share is checked, the sharer will return to the first segment of items and
+          continue sharing until you either press ‘Stop’ or a Captcha appears.</li>
       </ol>
 
 
@@ -342,12 +396,18 @@
           threshold of items that can be edit-shared before they place a temporary 24-hour freeze on this
           kind of sharing—which also affects listing new items.</li>
         <li>Press ‘Start.’</li>
-        <li>The Edit Sharer will scroll to the bottom of the page to load the full closet before sharing.</li>
-        <li>The Edit Sharer will begin sharing items. It will navigate to the item to be shared, click the edit, list, and confirm buttons, and then automatically navigate to the next item in the list. </li>
-        <li>Items edit shared will be logged to the console window.</li>
-        <li>The edit sharer will run until it has shared the number of items you’ve selected or all items on the page if you did not enter a number.</li>
-        <li>If infinite share is checked, the sharer will refresh the page each time it is finished sharing all items on the page and continue sharing until you either press ‘Stop’ or a Captcha appears.</li>
-      </ol>
+        <li>If there are more than 48 active listings in the closet (and you want to edit share your full closet,
+          or a greater number of items than 48), the Edit Sharer will share all
+          items on the first page then navigate to the next segment of 48 items then share those. You will see that
+          URL changes to something like "poshmark.com/closet/username?max_id=289759283479.312" as it loads
+          each segment.
+        </li>
+        <li>The Edit Sharer will continue sharing items from each segment of your closet
+           until it’s shared the number of items you’ve selected, or all of the
+          items in your closet if you did not enter a number.</li>
+        <li>If infinite share is checked, the Edit Sharer will return to the first segment of items and
+          continue sharing until you either press ‘Stop’ or a Captcha appears.</li>
+        </ol>
 
       <h3>What do I do if the reCaptcha pops up?</h3>
       <ol>
@@ -365,7 +425,6 @@
     </div>
 
     <div class="l-long content how-to-section modules margin-bottom" id="auto-follower">
-
       <span class="flex vert-center l-full bottom-padding">
         <img class="small-icon" src="images/followperson.svg">
         <h2 class="l-full">Auto Follower</h2>
@@ -380,8 +439,11 @@
 
       <ol>
         <li>Navigate to the page where you would like to follow users. </li>
-        <li>Click the ‘Load All Users’ button to automatically scroll to the bottom of the list and load all 1000 users. Make sure you either remain on the page while the users load, or have the tab open in its own window. </li>
         <li>Once all users are loaded, click ‘Start’ under ‘Auto Follower.’</li>
+        <li>The module will begin following all unfollowed users on the current page,
+        then navigate to the next segment of followers and continue on until all
+        unfollowed users are followed. You'll see that the URL changes to something
+        like "poshmark.com/user/username/followers?max_id=96" as each segment is loaded.</li>
       </ol>
 
       <h3>What do I do if the reCaptcha pops up?</h3>
@@ -389,7 +451,6 @@
         <li>Check the box under ‘I am not a robot’ and wait for the green checkmark to appear.</li>
         <li>Press 'Follow All Users'.</li>
       </ol>
-
     </div>
 
     <div class="l-long content how-to-section modules margin-bottom" id="feed-follower">
@@ -401,7 +462,7 @@
 
       <p>
         The Feed Follower can follow users from almost any page on
-        Poshmark—essentially anywhere the Auto Follower doesn’t cover. To use,
+        Poshmark-—essentially anywhere the Auto Follower doesn’t cover. To use,
       </p>
 
       <ol>
@@ -452,7 +513,6 @@
     </div>
 
     <div class="l-long content how-to-section modules margin-bottom" id="activity-returner">
-
       <span class="flex vert-center l-full bottom-padding">
         <img class="small-icon" src="images/heart.svg">
         <h2 class="l-full">News Feed Activity Returner</h2>
@@ -482,8 +542,11 @@
         <li>Refresh the page and this module will begin running again.</li>
       </ol>
 
-      <h3>What do I do if 'Page Not Found' come up?</h3>
+      <h3>What do I do if 'Page Not Found' comes up?</h3>
       <p>This means Poshmark couldn't find that user--it's possible they deleted their account. Press the 'Skip to Next User' Button.</p>
+
+      <h3>I'm on some weird page that says "followed, success: true"?</h3>
+      <p>TBH I'm not sure why this happens, but if you click the back arrow the Activity Returner will continue normally.</p>
 
       <h3>What do I do if the Activity Returner has stopped?</h3>
       <p>This usually happens because a reCaptcha popped up and sat idle for a while. The box will disappear after sitting for a bit.</p>
@@ -493,8 +556,63 @@
         <li>Press ’Start’ under 'Activity Returner'.</li>
         <li>Refresh the page.</li>
       </ol>
+    </div>
+
+    <div class="l-long content how-to-section modules margin-bottom" id="payment">
+      <span class="flex vert-center l-full bottom-padding">
+        <img class="small-icon" src="images/money.svg">
+        <h2 class="l-full">Payment</h2>
+      </span>
+
+      <h3>How long is the free trial?</h3>
+      <p>The free trial is 7 days. You will be alerted within the extension once the trial
+      is finished.</p>
+
+      <h3>How do I pay? Is it safe?</h3>
+      <p>All payment is handled through the Chrome web store and is very safe. I do not have
+      access to any of your payment details or identifying information.</p>
+
+      <h3>Can I cancel my subscription if I don't like it?</h3>
+      <p>You can cancel at any time through the Chrome web store. When you cancel, the extension
+      will be automatically removed from your browser.</p>
 
     </div>
+
+    <div class="l-long content how-to-section modules margin-bottom" id="other">
+      <span class="flex vert-center l-full bottom-padding">
+        <img class="small-icon" src="images/question.svg">
+        <h2 class="l-full">General/Other</h2>
+      </span>
+
+      <h3>None of the modules seem to be working?</h3>
+      <p>Sometimes this happens when the extension is first installed or updated. Refreshing the page
+        usually solves this issue. If that doesn't help, please contact simpleposher@gmail.com</p>
+
+      <h3>Aren't Poshmark bots not allowed? Can this get me banned?</h3>
+      <p>Short answer: Poshmark bots are discouraged but getting found out is highly unlikely and
+        getting your account banned is even more so.</p>
+      <p>Long answer:
+        Poshmark does mention in their community guidelines that they discourage
+        automation--this is where they also have rules about what to sell and what not to sell,
+        bullying/harassment--things that sellers get away with frequently. It's unlikely that
+        Poshmark would know you are using the Simple Posher extension because it's designed to mimic
+        human activity as closely as possible (and in fact is designed to run more slowly than you
+        can share so you can leave it running for long periods) and to stop when reCaptchas pop up. 
+      </p>
+      <p>
+        As far as I'm aware, as long as the rest of your activity is within Poshmark guidelines and you
+        aren't harassing other users, they don't really care what people do. More sales for you = more
+        money in their pockets, since they make money every time we do.
+      </p>
+      <p>
+        That said, the use of Simple Posher is at your own risk. I use Simple Posher in my own closet so I
+        am highly invested in its safety and have a lot of faith in it to work well. I'm always making
+        tweaks to make it better. 
+      </p>
+    </div>
+  </div>
+</div>
+
 
     <div class="l-full content how-to-section flex center phat" id="contact" style="text-align: center;">
 
@@ -503,6 +621,16 @@
         Want to submit a bug?<br>
         Email me at simpleposher@gmail.com
       </h2>
+
+      <div class="flex center">
+        <a href="https://www.facebook.com/simpleposher/">
+          <i class="fa fa-facebook-official" aria-hidden="true"></i>
+        </a>
+
+        <a href="https://www.instagram.com/simpleposher/">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+      </div>
 
     </div>
 
@@ -520,7 +648,6 @@
     <!-- Mobile navbar -->
     <script src="js/mobilenav.js"></script>
     <!-- Font Awesome -->
-    <script src="https://use.fontawesome.com/92578959dc.js"></script>
 
   </div>
 </body>

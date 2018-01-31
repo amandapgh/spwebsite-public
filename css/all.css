@@ -390,28 +390,27 @@ template {
 [hidden] {
   display: none; }
 
+@media (max-width: 1080px) {
+  h1 {
+    font-size: 4em; } }
+
 h2 {
-  font-size: 3em !important; }
+  font-size: 3em; }
+  @media (max-width: 1080px) {
+    h2 {
+      font-size: 4em; } }
 
-@media (max-width: 1080px) {
-  h1 {
-    font-size: 5em !important; } }
+h3 {
+  font-size: 2em; }
+  @media (max-width: 1080px) {
+    h3 {
+      font-size: 3em; } }
 
-@media (max-width: 450px) {
-  h1 {
-    font-size: 3em !important; } }
-
-@media (max-width: 1080px) {
-  h2,
-  h3,
-  h4 {
-    font-size: 1.5em !important; } }
-
-@media (max-width: 450px) {
-  h2,
-  h3,
-  h4 {
-    font-size: 1em !important; } }
+h4, p, button, li {
+  font-size: 1.3em; }
+  @media (max-width: 1080px) {
+    h4, p, button, li {
+      font-size: 2em !important; } }
 
 button,
 .button, .button--secondary, .button--large, .button--small, .button--tiny, .button--block {
@@ -657,33 +656,15 @@ h6 {
   line-height: 1.2;
   margin: 0 0 1rem; }
 
-h1 {
-  font-size: 2.5em; }
-
-h2 {
-  font-size: 2em; }
-
-h3 {
-  font-size: 1.75em; }
-
-h4 {
-  font-size: 1.5em; }
-
-h5 {
-  font-size: 1.25em; }
-
-h6 {
-  font-size: 1em; }
-
 p {
   margin: 0 0 1rem; }
 
 a {
   transition: color 0.2s;
-  color: #88B04B;
+  color: #4e43a3;
   text-decoration: none; }
   a:active, a:focus, a:hover {
-    color: #51682d;
+    color: #2b255b;
     outline: none; }
 
 pre {
@@ -709,11 +690,10 @@ hr {
 .l-container {
   position: relative;
   display: grid;
-  max-width: 1300px;
+  max-width: 100%;
   padding: 1rem 2rem;
   margin: auto;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 2rem; }
+  grid-template-columns: repeat(12, 1fr); }
   @media (max-width: 450px) {
     .l-container {
       grid-column-gap: 0 !important; } }
@@ -723,7 +703,7 @@ hr {
 
 .l-short {
   grid-column: span 4; }
-  @media (max-width: 670px) {
+  @media (max-width: 1080px) {
     .l-short {
       grid-column: span 12; } }
 
@@ -735,23 +715,28 @@ hr {
 
 .l-long {
   grid-column: span 8; }
-  @media (max-width: 670px) {
+  @media (max-width: 1080px) {
     .l-long {
       grid-column: span 12; } }
 
 .header {
-  padding-top: 15em;
+  padding-top: 12em;
   height: 100vh;
   text-align: center; }
+  @media (max-width: 1080px) {
+    .header {
+      padding-top: 20em; } }
   .header .header__logo {
     height: 150px;
     margin-right: 2em; }
     @media (max-width: 1080px) {
       .header .header__logo {
-        height: 75px;
         margin-right: 1em;
         position: relative;
         top: .5em; } }
+  @media (max-width: 900px) {
+    .header h2 {
+      font-size: 4em !important; } }
 
 #logo {
   display: flex !important;
@@ -760,6 +745,8 @@ hr {
   @media (max-width: 1080px) {
     #logo {
       flex-flow: column; } }
+  #logo > h1 {
+    font-size: 10em !important; }
 
 #navbar {
   padding: 0 1rem;
@@ -767,16 +754,16 @@ hr {
   position: fixed;
   top: 0;
   z-index: 1000;
-  background-color: #b0f3cf;
-  text-align: center; }
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1); }
   #navbar a {
-    color: #333;
+    color: white;
     text-transform: uppercase;
     padding: 0.5em 2rem;
     height: 100%;
     font-size: 1.1em; }
     #navbar a:hover {
-      background-color: #41e28c; }
+      background-color: rgba(0, 0, 0, 0.3); }
   @media (max-width: 1080px) {
     #navbar {
       display: none; } }
@@ -796,16 +783,16 @@ hr {
   display: none; }
   #mobile-navbar a {
     color: white !important;
-    font-size: 2em;
+    font-size: 3em;
     padding: .25em; }
     @media (max-width: 450px) {
       #mobile-navbar a {
         font-size: 1em; } }
 
 #hamburger {
-  font-size: 3em;
+  font-size: 4em;
   position: fixed;
-  top: 20px;
+  top: .8em;
   right: .25em;
   z-index: 1001;
   display: none;
@@ -813,11 +800,6 @@ hr {
   @media (max-width: 1080px) {
     #hamburger {
       display: block; } }
-  @media (max-width: 450px) {
-    #hamburger {
-      height: 30px;
-      top: 10px;
-      font-size: 2.5em; } }
 
 .hamburgerWhite {
   color: white !important; }
@@ -826,14 +808,15 @@ hr {
   width: 100%;
   text-align: right; }
   #menu-hamburger-popout h2 {
+    font-size: 2em;
     width: 100%;
     position: relative;
-    right: 65px;
+    right: 85px;
     bottom: 0px; }
     @media (max-width: 450px) {
       #menu-hamburger-popout h2 {
         bottom: 0;
-        font-size: 2em !important;
+        font-size: 3em !important;
         right: 45px; } }
 
 .l-section, .l-section--secondary {
@@ -851,9 +834,12 @@ hr {
   width: 75px;
   padding-right: 1em; }
 
-.small-icon {
+img.small-icon {
   width: 50px;
   padding-right: 1em; }
+  @media (max-width: 1080px) {
+    img.small-icon {
+      width: 70px; } }
 
 h1 {
   font-family: 'Grand Hotel', cursive;
@@ -863,10 +849,17 @@ h1 {
   text-align: center; }
 
 #how-to {
-  padding-top: 6rem; }
-  @media (max-width: 1080px) {
-    #how-to {
-      padding-top: 0; } }
+  background: rgba(0, 0, 0, 0.1); }
+
+#how-to-nav {
+  display: flex;
+  justify-content: center; }
+  #how-to-nav a {
+    padding: .25em 1em .25em 0;
+    font-size: 1.5em; }
+    @media (max-width: 1080px) {
+      #how-to-nav a {
+        font-size: 2em; } }
 
 .intro {
   height: 60vw;
@@ -874,14 +867,16 @@ h1 {
   padding-top: 20%; }
   @media (max-width: 1080px) {
     .intro {
-      height: auto;
-      padding-top: 2rem; } }
+      height: auto; } }
 
-#modules {
-  padding-top: 4rem; }
-  @media (max-width: 1080px) {
-    #modules {
-      padding-top: 0; } }
+#intro {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("/images/closetbackground.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0 !important; }
+  #intro h3 {
+    color: white; }
 
 .modules {
   background-color: rgba(176, 243, 207, 0.3);
@@ -889,6 +884,14 @@ h1 {
 
 .module {
   padding: 1rem; }
+
+#demo {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/poshcomputery2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; }
+  #demo h1 {
+    color: white; }
 
 #pricing li {
   font-size: 1.5em; }
@@ -899,11 +902,24 @@ h1 {
 #pricing h1 {
   margin-bottom: .25em !important; }
 
+#contact {
+  margin: 0 !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/hangingclothes.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  display: flex;
+  flex-direction: column; }
+  #contact a {
+    color: white;
+    font-size: 3em;
+    padding: 0 .25em; }
+    #contact a:hover {
+      color: #8981CB; }
+
 .phat {
   padding: 10rem 4rem; }
-  @media (max-width: 1080px) {
-    .phat {
-      padding: 0 2rem; } }
 
 .install {
   margin: 2rem;
@@ -918,9 +934,12 @@ h1 {
   justify-content: space-between; }
 
 .scroll-arrow {
-  height: 30px;
+  height: 50px;
   position: relative;
-  top: 5em; }
+  top: 5em;
+  transition: 0.3s; }
+  .scroll-arrow:hover {
+    height: 60px; }
 
 hr {
   margin: .5em;
