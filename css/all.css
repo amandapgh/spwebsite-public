@@ -877,6 +877,10 @@ h1 {
   margin: 0 !important; }
   #intro h3 {
     color: white; }
+  @media (max-width: 670px) {
+    #intro {
+      background-size: 150%;
+      background-repeat: no-repeat; } }
 
 .modules {
   background-color: rgba(176, 243, 207, 0.3);
@@ -892,6 +896,10 @@ h1 {
   background-attachment: fixed; }
   #demo h1 {
     color: white; }
+  @media (max-width: 670px) {
+    #demo {
+      background-size: 150%;
+      background-repeat: no-repeat; } }
 
 #pricing li {
   font-size: 1.5em; }
@@ -917,6 +925,10 @@ h1 {
     padding: 0 .25em; }
     #contact a:hover {
       color: #8981CB; }
+  @media (max-width: 670px) {
+    #contact {
+      background-size: 150%;
+      background-repeat: no-repeat; } }
 
 .phat {
   padding: 10rem 4rem; }
