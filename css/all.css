@@ -872,11 +872,15 @@ h1 {
 #intro {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("/images/closetbackground.jpg");
   background-position: center;
-  background-size: auto 100%;
+  background-size: cover;
   background-attachment: fixed;
   margin: 0 !important; }
   #intro h3 {
     color: white; }
+  @media (max-width: 670px) {
+    #intro {
+      background-size: contain;
+      background-attachment: scroll; } }
 
 .modules {
   background-color: rgba(176, 243, 207, 0.3);
@@ -888,14 +892,14 @@ h1 {
 #demo {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/poshcomputery2.jpg");
   background-position: center;
-  background-size: auto 100%;
+  background-size: cover;
   background-attachment: fixed; }
   #demo h1 {
     color: white; }
   @media (max-width: 670px) {
     #demo {
-      background-size: 150%;
-      background-repeat: no-repeat; } }
+      background-size: contain;
+      background-attachment: scroll; } }
 
 #pricing li {
   font-size: 1.5em; }
@@ -910,7 +914,7 @@ h1 {
   margin: 0 !important;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/hangingclothes.jpg");
   background-position: center;
-  background-size: auto 100%;
+  background-size: cover;
   background-attachment: fixed;
   color: white;
   display: flex;
@@ -923,8 +927,8 @@ h1 {
       color: #8981CB; }
   @media (max-width: 670px) {
     #contact {
-      background-size: 150%;
-      background-repeat: no-repeat; } }
+      background-size: contain;
+      background-attachment: scroll; } }
 
 .phat {
   padding: 10rem 4rem; }
