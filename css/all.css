@@ -879,7 +879,8 @@ h1 {
     color: white; }
   @media (max-width: 670px) {
     #intro {
-      background-size: 150%;
+      background-attachment: scroll;
+      background-size: 110%;
       background-repeat: no-repeat; } }
 
 .modules {
