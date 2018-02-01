@@ -877,9 +877,8 @@ h1 {
   margin: 0 !important; }
   #intro h3 {
     color: white; }
-  @media (max-width: 670px) {
+  @media (max-width: 1080px) {
     #intro {
-      background-size: contain;
       background-attachment: scroll; } }
 
 .modules {
@@ -896,9 +895,8 @@ h1 {
   background-attachment: fixed; }
   #demo h1 {
     color: white; }
-  @media (max-width: 670px) {
+  @media (max-width: 1080px) {
     #demo {
-      background-size: contain;
       background-attachment: scroll; } }
 
 #pricing li {
@@ -925,9 +923,8 @@ h1 {
     padding: 0 .25em; }
     #contact a:hover {
       color: #8981CB; }
-  @media (max-width: 670px) {
+  @media (max-width: 1080px) {
     #contact {
-      background-size: contain;
       background-attachment: scroll; } }
 
 .phat {
