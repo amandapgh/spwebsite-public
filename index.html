@@ -50,7 +50,8 @@
       <a href="#modules">Features</a>
       <a href="#demo">Demo</a>
       <a href="#pricing">Pricing</a>
-      <a href="#how-to">How To Use & FAQ</a>
+      <a href="#news">News</a>
+      <a href="#faq">How To Use & FAQ</a>
       <a href="#contact">Contact</a>
       <a href="https://chrome.google.com/webstore/detail/simple-posher/dpleccoifgoflihlgpjlkeigjemckbgn" onclick="ga('send', 'event', 'Clicked Chrome Store Link')">Install</a>
   </nav>
@@ -73,7 +74,9 @@
       <hr>
       <a href="#pricing">Pricing</a>
       <hr>
-      <a href="#how-to">How To Use & FAQ</a>
+      <a href="#news">News</a>
+      <hr>
+      <a href="#faq">How To Use & FAQ</a>
       <hr>
       <a href="#contact">Contact</a>
       <hr>
@@ -239,7 +242,6 @@
 
     </div>
 
-
   <div class="content l-container l-full phat flex center" id="pricing" >
     <h1 class="l-full">Pricing</h1>
 
@@ -252,6 +254,8 @@
       <li>Input into future features--like Party Sharers, a mobile app, and more!</li>
     </ul>
 
+    <p class="l-full">All subscriptions are managed through <a href="http://payments.google.com">payments.google.com</a>.</p>
+
     <span class="flex center l-full">
       <a href="https://chrome.google.com/webstore/detail/simple-posher/dpleccoifgoflihlgpjlkeigjemckbgn?authuser=1">
         <button class="install">Click here to install the extension</button>
@@ -260,14 +264,49 @@
   </div>
 
   <div class="content l-container l-full phat" id="how-to">
-    <h1 class="l-full">How to Use & FAQ</h1>
 
-    <span class="flex vert-center l-full bottom-padding">
-      <img class="small-icon" src="images/alert.svg">
-      <h2 class="l-full">Important Notes</h2>
+    <span class="l-full">
+      <h1 class="l-full" id="news">News & Updates</h1>
     </span>
 
+    <!-- <span class="flex vert-center l-full bottom-padding">
+      <img class="small-icon" src="images/alert.svg">
+      <h2 class="l-full">Important Notes</h2>
+    </span> -->
+
     <span class="l-long content">
+
+      <span>
+        <h3>Updates 03/17/18:</h3>
+      </span>
+      <p>I pushed a new update today with some asked-for bug fixes,
+        optimizations & features. Changes & additions are listed below:</p>
+      <ul>
+        <li>The most noticeable: I added the option to control the time delay
+          between follows, shares & comments. The default is set to a random
+          time between 3 and 5 seconds. If you're getting a lot of reCaptchas,
+          or if you've been temporarily share/follow frozen, I suggest raising these numbers and
+          making sure there's a good gap between them.
+        </li>
+        <li>I added a solution that will *hopefully* solve the issue of the extension
+          not working at all on first install/update until the page is refreshed a bunch of times.</li>
+        <li>All closets now revert to AVAILABLE ITEMS ONLY since some users were
+        having issues with sold items being shared. Note that this means if you would
+        like to manually load your closet before sharing, you will first need to select
+        available items only in the closet sidebar.</li>
+        <li>I also fixed an issue where the sharer would revert back to sharing all items if a category
+          or brand is selected for sharing. You can now pick categories like "Womens" or "Kids" to
+          share, or individual brands.</li>
+        <li>You can now infinite share on the whole site.</li>
+        <li>Fixed an issue where the reCaptcha alert wasn't popping up sometimes.</li>
+        <li>Fixed an issue where the Auto Follower was looping through all followers twice</li>
+      </ul>
+
+      <p>Next on the docket:</p>
+      <ul>
+        <li>Option to share closet in reverse order.</li>
+        <li>Party sharer in progress!</li>
+      </ul>
 
       <span>
         <h3>Updates 01/31/18:</h3>
@@ -309,7 +348,13 @@
         </p>
       </span>
 
-      <div class="l-full flex center" id="how-to-nav">
+    </span>
+    <span class="l-full">
+      <h1 class="l-full" id="faq">How to Use & FAQ</h1>
+    </span>
+    <span class="l-long content">
+
+      <div class="l-full flex" id="how-to-nav">
           <a href="#item-sharer">Item Sharer</a>
           <a href="#edit-sharer">Edit Sharer</a>
           <a href="#auto-follower">Auto Follower</a>
@@ -341,12 +386,13 @@
           box next to ‘Randomize items.’ Otherwise, items will be shared in the order they appear.</li>
         <li>If you would like the item sharer to continuously run on the page, check the box next to ‘Infinite share.’</li>
         <li>Press ‘Start.’</li>
+        <li>The page will refresh & show available items only if this is not already selected.</li>
         <li>The Item Sharer will begin sharing items on the page.</li>
         <li>Items shared will be logged to the console window.</li>
         <li>If there are more than 48 active listings in the closet (and you want to share your full closet,
           or a greater number of items than 48), the item sharer will share all
           items on the first page then navigate to the next segment of 48 items then share those. You will see that
-          URL changes to something like "poshmark.com/closet/username?max_id=289759283479.312" as it loads each
+          URL changes to something like "poshmark.com/closet/username?availability=available&max_id=2" as it loads each
           segment.
         </li>
         <li>The item sharer will continue sharing items from each segment of your closet
@@ -355,7 +401,6 @@
         <li>If infinite share is checked, the sharer will return to the first segment of items and
           continue sharing until you either press ‘Stop’ or a Captcha appears.</li>
       </ol>
-
 
       <h3>What do I do if the reCaptcha pops up?</h3>
       <ol>
@@ -396,10 +441,11 @@
           threshold of items that can be edit-shared before they place a temporary 24-hour freeze on this
           kind of sharing—which also affects listing new items.</li>
         <li>Press ‘Start.’</li>
+        <li>The page will refresh & show available items only if this is not already selected.</li>
         <li>If there are more than 48 active listings in the closet (and you want to edit share your full closet,
           or a greater number of items than 48), the Edit Sharer will share all
           items on the first page then navigate to the next segment of 48 items then share those. You will see that
-          URL changes to something like "poshmark.com/closet/username?max_id=289759283479.312" as it loads
+          URL changes to something like "poshmark.com/closet/username?availability=available&max_id=2" as it loads
           each segment.
         </li>
         <li>The Edit Sharer will continue sharing items from each segment of your closet
@@ -572,9 +618,17 @@
       <p>All payment is handled through the Chrome web store and is very safe. I do not have
       access to any of your payment details or identifying information.</p>
 
+      <h3>How do I edit my payment info?</h3>
+      <p>You can edit your payment information through <a href="http://payments.google.com">payments.google.com</a>
+
       <h3>Can I cancel my subscription if I don't like it?</h3>
-      <p>You can cancel at any time through the Chrome web store. When you cancel, the extension
-      will be automatically removed from your browser.</p>
+      <p>You can cancel at any time through <a href="http://payments.google.com">payments.google.com</a>. When you cancel, the extension
+      will be automatically removed from your browser, so I recommend waiting until right before your payment renews to get
+      the best bang for your buck.</p>
+
+      <h3>Can I get a refund?</h3>
+      <p>I only offer refunds to those who have submitted bug requests/issues I am not able to fix. If you're
+        having any problems with the extension, please email me at simpleposher@gmail.com.</p>
 
     </div>
 
@@ -585,8 +639,17 @@
       </span>
 
       <h3>None of the modules seem to be working?</h3>
-      <p>Sometimes this happens when the extension is first installed or updated. Refreshing the page
-        usually solves this issue. If that doesn't help, please contact simpleposher@gmail.com</p>
+      <p>Sometimes this happens when the extension is first installed or updated. Please
+      try the following:</p>
+        <li>Hard refresh Poshmark several times. On Windows: hold down CTRL and click the page
+          reload button, on Mac: hold Shift and click the reload button</li>
+        <li>Close Chrome completely & reopen it.</li>
+        <li>Disable any adblockers you may be using.</li>
+        <li>Remove the extension & reinstall it (you can click the 'Try Now button if you've paid,
+          just login with the same email address you paid with).</li>
+        <li>Restart your computer.</li>
+
+      <p>If that doesn't help, please contact simpleposher@gmail.com</p>
 
       <h3>Aren't Poshmark bots not allowed? Can this get me banned?</h3>
       <p>Short answer: Poshmark bots are discouraged but getting found out is highly unlikely and

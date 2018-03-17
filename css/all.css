@@ -962,3 +962,6 @@ hr {
 
 #youtube-demo {
   max-width: 100% !important; }
+
+.module--left {
+  padding-right: .5em; }
