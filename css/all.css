@@ -910,7 +910,7 @@ h1 {
 
 #contact {
   margin: 0 !important;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/hangingclothes.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/spwebsite-bg.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -926,6 +926,12 @@ h1 {
   @media (max-width: 1080px) {
     #contact {
       background-attachment: scroll; } }
+
+#terms-bar {
+  position: relative;
+  top: 9em; }
+  #terms-bar a, #terms-bar p {
+    font-size: .8em; }
 
 .phat {
   padding: 10rem 4rem; }
@@ -965,3 +971,15 @@ hr {
 
 .module--left {
   padding-right: .5em; }
+
+#news {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/spwebsite-bg2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white; }
+  #news h1 {
+    color: white; }
+  @media (max-width: 1080px) {
+    #news {
+      background-attachment: scroll; } }
