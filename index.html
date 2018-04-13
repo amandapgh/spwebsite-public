@@ -275,6 +275,17 @@
 
     <span class="l-long content">
       <span>
+        <h3>Updates 04/23/18:</h3>
+      </span>
+      <p>
+        The Party Sharer is finally here! Visit the <a href="#party-sharing">Party Sharing section</a> of the site
+        to see how it works. As always, feel free to email me at simpleposher@gmail with questions and any bugs you
+        may find with this new feature.
+      </p>
+      <p>Reverse sharing order is also an option now! You can use this if you'd like to maintain a certain order in your
+        closet. To read more about this, visit the <a href="#item-sharer">Item Sharer section</a>.</p>
+
+      <span>
         <h3>Updates 03/23/18:</h3>
       </span>
       <p>I pushed a smaller update today that will hopefully help those users whose
@@ -366,18 +377,19 @@
     </span>
     <span class="l-long content">
 
-      <div class="l-full flex" id="how-to-nav">
-          <a href="#item-sharer">Item Sharer</a>
-          <a href="#edit-sharer">Edit Sharer</a>
-          <a href="#auto-follower">Auto Follower</a>
-          <a href="#feed-follower">Feed Follower</a>
-      </div>
-      <div class="l-full flex center" id="how-to-nav">
-          <a href="#auto-commenter">Commenter</a>
-          <a href="#activity-returner">Activity Returner</a>
-          <a href="#payment">Payment</a>
+      <!-- <div class="l-full flex" id="how-to-nav"> -->
+          <a href="#item-sharer">Item Sharer</a>&#8226;
+          <a href="#party-sharing">Party Sharing</a>&#8226;
+          <a href="#edit-sharer">Edit Sharer</a>&#8226;
+          <a href="#auto-follower">Auto Follower</a>&#8226;
+          <a href="#feed-follower">Feed Follower</a>&#8226;
+      <!-- </div> -->
+      <!-- <div class="l-full flex center" id="how-to-nav"> -->
+          <a href="#auto-commenter">Commenter</a>&#8226;
+          <a href="#activity-returner">Activity Returner</a>&#8226;
+          <a href="#payment">Payment</a>&#8226;
           <a href="#other">General/Other</a>
-      </div>
+      <!-- </div> -->
 
     <div class="l-long content how-to-section modules margin-bottom" id="item-sharer">
 
@@ -428,6 +440,65 @@
         <li>Check the box under ‘I am not a robot’ and wait for the green checkmark to appear.</li>
         <li>Press the ‘Start’ button.</li>
       </ol>
+
+      <h3>Help, I want to keep my closet in a certain order!</h3>
+      <p>The reverse sharing option is here to help! Try the following:</p>
+
+      <ol>
+        <li>Scroll down to load your full closet.</li>
+        <li>Click "Available Items Only" in the sidebar.</li>
+        <li>Check the "Reverse Sharing Order" checkbox. Make sure "Infinite Share" is not checked.</li>
+        <li>Make sure the time delay is fairly high--I set a time between 4 and 5 seconds between shares to make sure
+          items do not get mixed up.</li>
+        <li>Click 'Start'.</li>
+        <li>If you get a Captcha during this process, don't refresh the page. Just restart the sharer to maintain your
+          closet order.</li>
+      </ol>
+
+      <h3>The console says my items are being shared but they're not actually showing up as shared in Poshmark.</h3>
+      <p>You probably have a temporary share freeze from Poshmark. Take a break and then try to do some manual shares.
+      If everything is working, try setting a higher time delay to avoid this issue.</p>
+
+      <h3>Items are being shared really fast, or are being shared more than once.</h3>
+      <p>This can occur if you click the Start button multiple times, which runs the sharing script on the page more than
+      once. Refresh the page to fix this issue.</p>
+
+    </div>
+
+    <div class="l-long content how-to-section modules margin-bottom" id="party-sharing">
+
+      <span class="flex vert-center l-full bottom-padding">
+        <img class="small-icon" src="images/balloon.svg">
+        <h2 class="l-full">Party Sharing</h2>
+      </span>
+
+      <p>Party sharing can be completed from anywhere the Item Sharer works. Here's how to use this feature:</p>
+
+      <ol>
+        <li>The current party will be listed within the extension next to "Current Party." If no parties are
+        happening, it will say "no parties happening now."</li>
+        <li>Navigate to whatever page you want to share to the party from, e.g. your closet.</li>
+        <li>The keywords tell the Party Sharer which items to to share to the current party. You can input keywords for anything you
+        want to share (separated by commas). For example, for the "Lululemon, Adidas, Nike, Athleta, and Electric Yoga Party" my keywords would be:
+        lululemon, adidas, nike, athleta, electric yoga. It is not case sensitive.
+        For something like the "Best in Dresses & Skirts Party" my keywords could be:
+        dress, gown, skirt.</li>
+        <li>Use singular words (e.g. "dress" instead of "dresses"). The sharer will find any instance of this word, even if it's
+          part of another word (e.g. "sundress").</li>
+        <li>For a broader category party like "Best in Kids", you can choose to show the relevant items in your closet only (click the "Kids" category),
+          and then check the "Share all Items to Page" checkbox. Both this checkbox and the "Share to Party Checkbox" must
+          be checked to share items to party.</li>
+        <li>When you've entered all of your keywords, click the "Save Keywords" button.
+        <li>Click the Item Sharer start button. From here, it will work like the Item Sharer.</li>
+      </ol>
+
+      <h2>Note:</h2>
+      <p>Unfortunately, Poshmark does not display any kind of message if you attempt to share an item to a party where it's not
+      relevant (for example, you try to share a shirt to the "Best in Bags" party), but it will not actually share the item in this case.
+      If you want to double check that an item was shared to a party, make sure you see it in
+      the party itself, or you can use the <a href="https://developers.google.com/web/tools/chrome-devtools/console/">Chrome developer console.</a>
+      If you see a "400 Error" within the console, your item did not fit the party theme and was not shared.</p>
+
 
     </div>
 
