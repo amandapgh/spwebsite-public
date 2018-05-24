@@ -275,6 +275,20 @@
 
     <span class="l-long content">
       <span>
+        <h3>Updates 05/24/18:</h3>
+      </span>
+      <p>Lots of small but important optimizations this month!</p>
+      <li>The Start and Stop buttons for each function have been merged into one button.
+      This will hopefully be a little easier and more efficient for folks because you can tell
+      whether a module is currently running. It will also cure all sorts of weirdness related to pressing
+      start buttons more than once & injecting the script into the page multiple times.</li>
+      <li>The item sharer will now continue where you left off if a captcha pops up while you're sharing!
+      This should help sellers who keep their closets in a particular order.</li>
+      <li>Fixed a bug with the Captcha alert popping up a bunch of times.</li>
+      <li>Fixed a bug regarding case sensitivity in party sharing.</li>
+      <br>
+
+      <span>
         <h3>Updates 04/23/18:</h3>
       </span>
       <p>
@@ -430,6 +444,7 @@
       <ol>
         <li>Check the box under ‘I am not a robot’ and wait for the green checkmark to appear.</li>
         <li>Press the ‘Start’ button again.</li>
+        <li>The Item Sharer will continue where it left off</li>
       </ol>
 
       <h3>What do I do if the Item Sharer has stopped?</h3>
@@ -446,7 +461,7 @@
 
       <ol>
         <li>Scroll down to load your full closet.</li>
-        <li>Click "Available Items Only" in the sidebar.</li>
+        <li>Click "Available Items Only" in the sidebar of your Poshmark closet.</li>
         <li>Check the "Reverse Sharing Order" checkbox. Make sure "Infinite Share" is not checked.</li>
         <li>Make sure the time delay is fairly high--I set a time between 4 and 5 seconds between shares to make sure
           items do not get mixed up.</li>
@@ -459,9 +474,9 @@
       <p>You probably have a temporary share freeze from Poshmark. Take a break and then try to do some manual shares.
       If everything is working, try setting a higher time delay to avoid this issue.</p>
 
-      <h3>Items are being shared really fast, or are being shared more than once.</h3>
+      <!-- <h3>Items are being shared really fast, or are being shared more than once.</h3>
       <p>This can occur if you click the Start button multiple times, which runs the sharing script on the page more than
-      once. Refresh the page to fix this issue.</p>
+      once. Refresh the page to fix this issue.</p> -->
 
     </div>
 
@@ -578,7 +593,7 @@
       <h3>What do I do if the reCaptcha pops up?</h3>
       <ol>
         <li>Check the box under ‘I am not a robot’ and wait for the green checkmark to appear.</li>
-        <li>Press 'Follow All Users'.</li>
+        <li>Press 'Start' again.</li>
       </ol>
     </div>
 
@@ -708,6 +723,27 @@
       <p>You can cancel at any time through <a href="http://payments.google.com">payments.google.com</a>. When you cancel, the extension
       will be automatically removed from your browser, so I recommend waiting until right before your payment renews to get
       the best bang for your buck.</p>
+
+      <h3>I paid, but I'm still getting the "free trial ended" message.</h3>
+      <p>This is likely due to a mismatch between the email address that you logged into Simple Posher with and the email
+        you used to pay. Here's how to find out:</p>
+        <ol>
+          <li>Visit <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> and check whether
+          you see Simple Posher anywhere on that list. If you don't, log into any other Google accounts you may have
+          and check those accounts.</li>
+          <li>Look for the email receipt you received from the Chrome webstore when you paid for Simple Posher. Make sure it
+          was sent to the same email address that you gave Simple Posher permission to use.</li>
+          <li>If there's a mismatch, visit <a href="chrome://identity-internals">chrome://identity-internals</a> (copy and
+            paste if the link doesn't work). Search
+            for 'Simple Posher' on that page. You should see something like this:
+            <img src="images/sp-identity-cache.png" />
+          <li>Click the 'Revoke' button underneath 'Scopes'.</li>
+          <li>The next time you try to use the extension, it will ask you to log in with a Google account again. Now, login
+            with the same email that you used for payment.</li>
+          <li>You may need to close & reopen Chrome.</li>
+        </ol>
+
+      <p>If this doesn't solve the problem, please email me.</p>
 
       <h3>Can I get a refund?</h3>
       <p>I only offer refunds to those who have submitted bug requests/issues I am not able to fix. If you're
