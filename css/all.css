@@ -918,8 +918,7 @@ h1 {
   display: flex;
   flex-direction: column; }
   #contact a {
-    color: white;
-    font-size: 3em;
+    color: #ABA5DA;
     padding: 0 .25em; }
     #contact a:hover {
       color: #8981CB; }
@@ -980,6 +979,8 @@ hr {
   color: white; }
   #news h1 {
     color: white; }
+  #news a {
+    color: #ABA5DA; }
   @media (max-width: 1080px) {
     #news {
       background-attachment: scroll; } }
