@@ -33,10 +33,10 @@
   <!-- Styles -->
   <link rel="stylesheet" href="css/all.css">
 
-	<!-- Google fonts -->
-	<link href="https://fonts.googleapis.com/css?family=PT+Mono|Sacramento" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=PT+Mono|Sacramento" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
   <script src="https://use.fontawesome.com/92578959dc.js"></script>
@@ -251,7 +251,7 @@
     <ul class="l-full">
       <li>Ongoing service and support.</li>
       <li>Unlimited free upgrades.</li>
-      <li>Input into future features--like Party Sharers, a mobile app, and more!</li>
+      <li>Input into future features like a mobile app and more!</li>
     </ul>
 
     <p class="l-full">All subscriptions are managed through <a href="http://payments.google.com">payments.google.com</a>.</p>
@@ -276,6 +276,19 @@
     <span class="l-long content">
 
       <span>
+        <h3>Updates 04/25/19:</h3>
+      </span>
+      <h3>Important update!</h3>
+      <p>Simple Posher has just had a significant update that fixes several bugs
+      and optimizes several parts of the extension. The Item Sharers & Activity Returner have undergone almost total re-writes which will eliminate several common errors and make Simple Posher more intuitive to use! Here's what's most important to know:</p>
+      <li>There is a new function called My Feed Sharer that works with the updated Poshmark feed page. The regular item sharer does NOT work on this page any longer due to the new format, however the My Feed Sharer functions in the same way and uses the same settings.</li>
+      <li>Simple Posher can finally load your full closet without loading segments of items on different pages!</li>
+      <li>The Item Sharer, new My Feed Sharer, and Activity Returner now work primarily in the background. This means you will NOT see any obvious activity on the page when sharing items. If you want to ensure your items are being shared, you can visit poshmark.com/yourcloset/shares, or simply refresh your closet after sharing your own items. Note that it can sometimes take a few refreshes before the closet updates.</li>
+      <li>The Newsfeed Activity Returner has been fixed and updated to work with the new Newsfeed page. It will work on the main tab, the shares tab, the likes tab, and the follows tab.</li>
+      <li>Updates to the followers & the commenter are soon to come.</li>
+      <br>
+
+      <!-- <span>
         <h3>Updates 09/27/18:</h3>
       </span>
       <p>Pushed a small update today that should help with the issue of the 'free trial ended' message popping
@@ -408,7 +421,8 @@
           background tabs to save memory. I recommend disabling this while you run the extension and re-enabling afterwards.
           <a class="margin-bottom" href="https://winaero.com/blog/disable-tab-throttling-google-chrome/">To learn how to do this, click here.</a>
         </p>
-      </span>
+      </span> -->
+
     </span>
   </div>
 
@@ -421,6 +435,7 @@
 
       <!-- <div class="l-full flex" id="how-to-nav"> -->
           <a href="#item-sharer">Item Sharer</a>&#8226;
+          <a href="#my-feed-sharer">My Feed Sharer</a>&#8226;
           <a href="#party-sharing">Party Sharing</a>&#8226;
           <a href="#edit-sharer">Edit Sharer</a>&#8226;
           <a href="#auto-follower">Auto Follower</a>&#8226;
@@ -452,27 +467,20 @@
           box next to ‘Randomize items.’ Otherwise, items will be shared in the order they appear.</li>
         <li>If you would like the item sharer to continuously run on the page, check the box next to ‘Infinite share.’</li>
         <li>Press ‘Start.’</li>
-        <li>The page will refresh & show available items only if this is not already selected.</li>
-        <li>The Item Sharer will begin sharing items on the page.</li>
-        <li>Items shared will be logged to the console window.</li>
-        <li>If there are more than 48 active listings in the closet (and you want to share your full closet,
-          or a greater number of items than 48), the item sharer will share all
-          items on the first page then navigate to the next segment of 48 items then share those. You will see that
-          URL changes to something like "poshmark.com/closet/username?availability=available&max_id=2" as it loads each
-          segment.
-        </li>
-        <li>The item sharer will continue sharing items from each segment of your closet
-           until it’s shared the number of items you’ve selected, or all of the
+        <li>The page will refresh & show available items only if this option is not already selected.</li>
+        <li>If inside a closet, the Item Sharer will load the full closet.</li>
+        <li>Once everything is loaded, the Item Sharer will begin sharing items on the page.</li>
+        <li>Sucessfully shared items will be logged to the console window. If unable to share an item, the console will note this.</li>
+        <li>The item sharer will continue sharing items from your closet until it’s shared the number of items you’ve selected, or all of the
           items in your closet if you did not enter a number.</li>
-        <li>If infinite share is checked, the sharer will return to the first segment of items and
-          continue sharing until you either press ‘Stop’ or a Captcha appears.</li>
+        <li>If infinite share is checked, the sharer will refresh the page and start from the beginning until you press ‘Stop’ or a reCaptcha appears.</li>
       </ol>
 
       <h3>What do I do if the reCaptcha pops up?</h3>
       <ol>
         <li>Check the box under ‘I am not a robot’ and wait for the green checkmark to appear.</li>
         <li>Press the ‘Start’ button again.</li>
-        <li>The Item Sharer will continue where it left off</li>
+        <!-- <li>The Item Sharer will continue where it left off</li> -->
       </ol>
 
       <h3>What do I do if the Item Sharer has stopped?</h3>
@@ -486,26 +494,67 @@
 
       <h3>Help, I want to keep my closet in a certain order!</h3>
       <p>The reverse sharing option is here to help! Try the following:</p>
-
       <ol>
-        <li>Scroll down to load your full closet.</li>
-        <li>Click "Available Items Only" in the sidebar of your Poshmark closet.</li>
-        <li>Check the "Reverse Sharing Order" checkbox. Make sure "Infinite Share" is not checked.</li>
-        <li>Make sure the time delay is fairly high--I set a time between 4 and 5 seconds between shares to make sure
-          items do not get mixed up.</li>
-        <li>Click 'Start'.</li>
-        <li>If you get a Captcha during this process, don't refresh the page. Just restart the sharer to maintain your
+        <li>Navigate to your closet and check the 'reverse share order' checkbox.</li>
+        <li>Press start.</li>
+        <li>After loading the closet, the Item Sharer will begin sharing your items starting from the bottom.</li>
+        <li>If you get a Captcha during this process, don't refresh the page. Just restart the Item Sharer to maintain your
           closet order.</li>
       </ol>
 
-      <h3>The console says my items are being shared but they're not actually showing up as shared in Poshmark.</h3>
-      <p>You probably have a temporary share freeze from Poshmark. Take a break and then try to do some manual shares.
-      If everything is working, try setting a higher time delay to avoid this issue.</p>
+<!--       <h3>The console says my items are being shared but they're not actually showing up as shared in Poshmark.</h3>
+      <p>You probably have a temporary share freeze from Poshmark. Take a break and then try to do some manual shares. If everything is working, try setting a higher time delay to avoid this issue.</p> -->
 
       <!-- <h3>Items are being shared really fast, or are being shared more than once.</h3>
       <p>This can occur if you click the Start button multiple times, which runs the sharing script on the page more than
       once. Refresh the page to fix this issue.</p> -->
+    </div>
 
+        <div class="l-long content how-to-section modules margin-bottom" id="my-feed-sharer">
+
+      <span class="flex vert-center l-full bottom-padding">
+        <img class="small-icon" src="images/shirt.svg">
+        <h2 class="l-full">My Feed Sharer</h2>
+      </span>
+
+      <p>The My Feed Sharer functions the same way as the Item Sharer, but works with the unique format of the My Feed page. It will share all items on the page, even those without an obvious share button. To use:</p>
+      <ol>
+        <li>Navigate to poshmark.com/my-feed.</li>
+        <li>If you would like to share a certain number of items, enter this number
+          into the box that says ‘Number of items to share.’</li>
+        <li>If you would like to randomize the order of the shared items, check the
+          box next to ‘Randomize items.’ Otherwise, items will be shared in the order they appear.</li>
+        <li>If you would like the My Feed Sharer to continuously run on the page, check the box next to ‘Infinite share.’</li>
+        <li>Press ‘Start.’</li>
+        <li>Once everything is loaded, the My Feed Sharer will begin sharing items on the page.</li>
+        <li>Sucessfully shared items will be logged to the console window. If unable to share an item, the console will note this.</li>
+        <li>The My Feed Sharer will continue sharing items from your closet until it’s shared the number of items you’ve selected, or all of the
+          items on the page if you did not enter a number.</li>
+        <li>If infinite share is checked, the My Feed Sharer will refresh the page and start sharing from the beginning until you press ‘Stop’ or a reCaptcha appears.</li>
+      </ol>
+
+      <h3>What do I do if the reCaptcha pops up?</h3>
+      <ol>
+        <li>Check the box under ‘I am not a robot’ and wait for the green checkmark to appear.</li>
+        <li>Press the ‘Start’ button again.</li>
+        <!-- <li>The Item Sharer will continue where it left off</li> -->
+      </ol>
+
+      <h3>What do I do if the Item Sharer has stopped?</h3>
+      <p>This usually happens because a reCaptcha popped up and sat idle for a while. The box will disappear after sitting for a bit.</p>
+
+      <ol>
+        <li>Try sharing one item manually or pressing the ‘Start’ button to see if the reCaptcha pops up.</li>
+        <li>Check the box under ‘I am not a robot’ and wait for the green checkmark to appear.</li>
+        <li>Press the ‘Start’ button.</li>
+      </ol>
+
+<!--       <h3>The console says my items are being shared but they're not actually showing up as shared in Poshmark.</h3>
+      <p>You probably have a temporary share freeze from Poshmark. Take a break and then try to do some manual shares. If everything is working, try setting a higher time delay to avoid this issue.</p> -->
+
+      <!-- <h3>Items are being shared really fast, or are being shared more than once.</h3>
+      <p>This can occur if you click the Start button multiple times, which runs the sharing script on the page more than
+      once. Refresh the page to fix this issue.</p> -->
     </div>
 
     <div class="l-long content how-to-section modules margin-bottom" id="party-sharing">
@@ -515,10 +564,10 @@
         <h2 class="l-full">Party Sharing</h2>
       </span>
 
-      <p>Party sharing can be completed from anywhere the Item Sharer works. Here's how to use this feature:</p>
+      <p>Party sharing can be completed from anywhere the Item Sharer or works, as well as on the My Feed page. Here's how to use this feature:</p>
 
       <ol>
-        <li>The current party will be listed within the extension next to "Current Party." If no parties are
+        <li>The current party (or next party, on the My Feed page) will be listed within the extension next to "Current Party." If no parties are
         happening, it will say "no parties happening now."</li>
         <li>Navigate to whatever page you want to share to the party from, e.g. your closet.</li>
         <li>The keywords tell the Party Sharer which items to to share to the current party. You can input keywords for anything you
@@ -528,34 +577,20 @@
         dress, gown, skirt.</li>
         <li>Use singular words (e.g. "dress" instead of "dresses"). The sharer will find any instance of this word, even if it's
           part of another word (e.g. "sundress").</li>
-        <li>For a broader category party like "Best in Kids", you can choose to show the relevant items in your closet only (click the "Kids" category),
-          and then check the "Share all Items to Page" checkbox. Both this checkbox and the "Share to Party Checkbox" must
-          be checked to share items to party.</li>
+        <li>For a broader category party like "Best in Kids", you can choose to show the relevant items in your closet only (click the "Kids" category), and then check the "Share all Items to Page" checkbox. Both this checkbox and the "Share to Party Checkbox" must be checked to share items to party.</li>
         <li>When you've entered all of your keywords, click the "Save Keywords" button.
-        <li>Click the Item Sharer start button. From here, it will work like the Item Sharer.</li>
+        <li>Click the Item Sharer start button in closets or on most of Poshmark. If on the My Feed page, click the My Feed Sharer start button. From here, everything will function like the regular Item Sharer.</li>
       </ol>
-
-      <h2>Note:</h2>
-      <p>Unfortunately, Poshmark does not display any kind of message if you attempt to share an item to a party where it's not
-      relevant (for example, you try to share a shirt to the "Best in Bags" party), but it will not actually share the item in this case.
-      If you want to double check that an item was shared to a party, make sure you see it in
-      the party itself, or you can use the <a href="https://developers.google.com/web/tools/chrome-devtools/console/">Chrome developer console.</a>
-      If you see a "400 Error" within the console, your item did not fit the party theme and was not shared.</p>
-
-
     </div>
 
     <div class="l-long content how-to-section modules margin-bottom" id="edit-sharer">
-
       <span class="flex vert-center l-full bottom-padding">
         <img class="small-icon" src="images/closet.svg">
         <h2 class="l-full">Edit Sharer</h2>
       </span>
-
       <p>
         The Edit Sharer can edit-share items from your closet, skipping sold items and Meet the Posher listings. To run,
       </p>
-
       <ol>
         <li>Navigate to your closet. </li>
         <li>If you would like to share a certain number of items, enter this number
@@ -568,23 +603,15 @@
           kind of sharing—which also affects listing new items.</li>
         <li>Press ‘Start.’</li>
         <li>The page will refresh & show available items only if this is not already selected.</li>
-        <li>If there are more than 48 active listings in the closet (and you want to edit share your full closet,
-          or a greater number of items than 48), the Edit Sharer will share all
-          items on the first page then navigate to the next segment of 48 items then share those. You will see that
-          URL changes to something like "poshmark.com/closet/username?availability=available&max_id=2" as it loads
-          each segment.
-        </li>
-        <li>The Edit Sharer will continue sharing items from each segment of your closet
-           until it’s shared the number of items you’ve selected, or all of the
-          items in your closet if you did not enter a number.</li>
-        <li>If infinite share is checked, the Edit Sharer will return to the first segment of items and
-          continue sharing until you either press ‘Stop’ or a Captcha appears.</li>
+        <li>The Edit Sharer will load your full closet.</li>
+        <li>Once loaded, it will navigate to the first item to share and proceed through the edit-sharing process.
+        <li>The Edit Sharer will continue sharing items from each segment of your closet until it’s shared the number of items you’ve selected, or all of the items in your closet if you did not enter a number.</li>
+        <li>If infinite share is checked, the Edit Sharer will return to your closet and continue sharing from the beginning until you either press ‘Stop’ or a Captcha appears.</li>
         </ol>
 
       <h3>What do I do if the reCaptcha pops up?</h3>
       <ol>
         <li>Check the box under ‘I am not a robot’ and wait for the green checkmark to appear.</li>
-        <li>Navigate back to your closet.</li>
         <li>Press the ‘Start’ button under 'Edit Share'.</li>
       </ol>
 
@@ -702,9 +729,10 @@
 
       <ol>
         <li>Navigate to your News Feed. </li>
+        <li>If you would like to share from a particular tab, e.g. the Shares tab, click on the tab.</li>
         <li>Scroll down to load all of the activity you would like to return.</li>
         <li>Press ’Start’ under 'Activity Returner'.</li>
-        <li>The module will navigate to the first user’s page, follow them, and return all of their shares. If they did not share any of your items, it will not share any of theirs. When it’s done, it will move onto the next user until it has returned activity for the full list of users. </li>
+        <li>The module will navigate to the first user’s page, follow them, and return all of their shares. If they did not share any of your items, it will not share any of theirs. When it’s done, it will move onto the next user until it has returned activity for the full list of users.</li>
       </ol>
 
       <h3>What do I do if the reCaptcha pops up?</h3>
@@ -741,7 +769,7 @@
       is finished.</p>
 
       <h3>How do I pay? Is it safe?</h3>
-      <p>All payment is handled through the Chrome web store and is very safe. I do not have
+      <p>All payment is handled through the Chrome web store & Google Payments and is very safe. I do not have
       access to any of your payment details or identifying information.</p>
 
       <h3>How do I edit my payment info?</h3>
@@ -771,11 +799,11 @@
           <li>You may need to close & reopen Chrome.</li>
         </ol>
 
-      <p>If this doesn't solve the problem, please email me.</p>
+      <p>If this doesn't solve the problem, please fill out our support form at the bottom of the page.</p>
 
       <h3>Can I get a refund?</h3>
-      <p>I only offer refunds to those who have submitted bug requests/issues I am not able to fix. If you're
-        having any problems with the extension, please <a href="https://goo.gl/forms/NL24XspFMI6rR26k2">fill out our customer support form here</a>.</p>
+      <p>I offer refunds on a case-by-case basis to those who have submitted bug requests/issues I am not able to fix. If you're
+        having any problems with the extension, please <a href="https://goo.gl/forms/NL24XspFMI6rR26k2">fill out our customer support form here</a></p>
 
     </div>
 
