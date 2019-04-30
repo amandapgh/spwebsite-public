@@ -275,21 +275,19 @@
 
     <span class="l-long content">
       
-          <span>
-        <h3>Updates 04/27/19:</h3>
+    <span>
+        <h3>Updates 04/30/19:</h3>
      </span>
-     <p>Hey all! Unfortunately, several people were having issues with the new update, so we've rolled back for now. I'm going to do some troubleshooting and re-release along with follower/commenter updates ASAP! Thanks for your patience.</p>
-      <span>
-        <h3>Updates 04/25/19:</h3>
-      </span>
+     <p></p>
+
       <h3>Important update!</h3>
-      <p>Simple Posher has just had a significant update that fixes several bugs
-      and optimizes several parts of the extension. The Item Sharers & Activity Returner have undergone almost total re-writes which will eliminate several common errors and make Simple Posher more intuitive to use! Here's what's most important to know:</p>
+      <p>Hi guys! Just pushed the Simple Posher 2.0 update that fixes several bugs and optimizes several parts of the extension. The Item Sharers & Activity Returner have undergone almost total re-writes which will eliminate several common errors and make Simple Posher more intuitive to use! Here's what's most important to know:</p>
+
+      <li>The extension has returned to clicking items to share (rather than sending a request in the background) because many users were having issues with Captchas not popping up. I've made sure to trigger Captchas in all relevant functions to ensure we are back to normal functionality.</li>
       <li>There is a new function called My Feed Sharer that works with the updated Poshmark feed page. The regular item sharer does NOT work on this page any longer due to the new format, however the My Feed Sharer functions in the same way and uses the same settings.</li>
-      <li>Simple Posher can finally load your full closet without loading segments of items on different pages!</li>
-      <li>The Item Sharer, new My Feed Sharer, and Activity Returner now work primarily in the background. This means you will NOT see any obvious activity on the page when sharing items. If you want to ensure your items are being shared, you can visit poshmark.com/user/yourcloset/shares, or simply refresh your closet after sharing your own items. Note that it can sometimes take a few refreshes before the closet updates.</li>
+      <li>Simple Posher can finally load your full closet as well as all users on /followers and /following pages without loading segments of items on different pages!</li>
       <li>The Newsfeed Activity Returner has been fixed and updated to work with the new Newsfeed page. It will work on the main tab, the shares tab, the likes tab, and the follows tab.</li>
-      <li>Updates to the followers & the commenter are soon to come.</li>
+      <li>All other functions have been optimized to reduce errors.</li>
       <br>
 
       <!-- <span>
@@ -643,10 +641,7 @@
       <ol>
         <li>Navigate to the page where you would like to follow users. </li>
         <li>Once all users are loaded, click ‘Start’ under ‘Auto Follower.’</li>
-        <li>The module will begin following all unfollowed users on the current page,
-        then navigate to the next segment of followers and continue on until all
-        unfollowed users are followed. You'll see that the URL changes to something
-        like "poshmark.com/user/username/followers?max_id=96" as each segment is loaded.</li>
+        <li>The module will begin following all unfollowed users on the page.</li>
       </ol>
 
       <h3>What do I do if the reCaptcha pops up?</h3>
