@@ -816,6 +816,20 @@
         <h2 class="l-full">General/Other</h2>
       </span>
 
+      <h3>A module is only working when I have the Poshmark tab open, it isn't working in the background.</h3>
+      <p>This occurs due to something called background tab throttling. It's a Chrome feature that limits the activity in background tabs to conserve CPU & battery life, but can cause issues with Simple Posher. To turn off this feature, take the following steps.</p>
+      <ol>
+      	<img src="images/background-throttle-1.png">
+      	<li>Enter the following into the Chrome address bar and press enter: </li>
+      	<p>chrome://flags/#expensive-background-timer-throttling<p>
+      	<img src="images/background-throttle-2.png">
+      	<li>Select "disable" from the dropdown menu.</li>
+	    <img src="images/background-throttle-3.png">
+	    <li>Relaunch Google Chrome.</li>
+      </ol>
+      <p>If you have any issues after disabling this feature, you can re-enable it at any time.</p>
+      <br>
+
       <h3>None of the modules seem to be working?</h3>
       <p>Sometimes this happens when the extension is first installed or updated. Please
       try the following:</p>
