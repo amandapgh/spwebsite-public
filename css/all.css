@@ -390,9 +390,12 @@ template {
 [hidden] {
   display: none; }
 
-@media (max-width: 1080px) {
-  h1 {
-    font-size: 4em; } }
+h1 {
+  font-family: 'brittany-signature', cursive;
+  padding-bottom: .5em; }
+  @media (max-width: 1080px) {
+    h1 {
+      font-size: 4em; } }
 
 h2 {
   font-size: 3em; }
@@ -412,14 +415,16 @@ h4, p, button, li {
     h4, p, button, li {
       font-size: 2em !important; } }
 
+p, li {
+  font-family: 'Open Sans Condensed', sans-serif; }
+
 button,
 .button, .button--secondary, .button--large, .button--small, .button--tiny, .button--block {
-  transition: background, .2s;
   display: inline-block;
   padding: .5em 1em;
   color: #fff !important;
-  background-color: #88B04B;
-  border: 1px solid #88B04B;
+  background-color: #A2E9FA;
+  border: 1px solid #A2E9FA;
   border-radius: 3px;
   font-size: 1.2em;
   font-weight: 400;
@@ -440,8 +445,8 @@ button,
   .button:active, .button--secondary:active, .button--large:active, .button--small:active, .button--tiny:active, .button--block:active, button.active,
   .active.button, .active.button--secondary, .active.button--large, .active.button--small, .active.button--tiny, .active.button--block {
     color: #fff;
-    background-color: #7a9e43;
-    border-color: #88B04B;
+    background-color: #8ae3f9;
+    border-color: #A2E9FA;
     outline: 0;
     text-decoration: none; }
   @media (max-width: 450px) {
@@ -451,11 +456,11 @@ button,
 
 .button--secondary {
   color: #fff !important;
-  background-color: #88B04B;
-  border-color: #88B04B; }
+  background-color: #A2E9FA;
+  border-color: #A2E9FA; }
   .button--secondary:hover, .button--secondary:active, .button--secondary.active {
-    background-color: #a0c16d;
-    border-color: #88B04B; }
+    background-color: #d2f4fd;
+    border-color: #A2E9FA; }
 
 .button--large {
   font-size: 1.5em !important; }
@@ -517,7 +522,7 @@ select {
   input:focus,
   textarea:focus,
   select:focus {
-    border-color: #88B04B;
+    border-color: #A2E9FA;
     outline: none; }
   input:disabled,
   textarea:disabled,
@@ -555,17 +560,12 @@ html {
 *::after {
   box-sizing: inherit; }
 
-h1, h2, h3, h4, h5 {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important; }
-
 html,
 body {
   height: 100%; }
 
 body {
   margin: 0;
-  background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
   background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed; }
@@ -660,11 +660,11 @@ p {
   margin: 0 0 1rem; }
 
 a {
-  transition: color 0.2s;
-  color: #4e43a3;
+  transition: 0.3s;
+  color: #EAB0FB;
   text-decoration: none; }
   a:active, a:focus, a:hover {
-    color: #2b255b;
+    color: #A2E9FA;
     outline: none; }
 
 pre {
@@ -680,9 +680,9 @@ hr {
 .l-section--secondary {
   color: #fff; }
   .l-section--secondary a {
-    color: #88B04B; }
+    color: #A2E9FA; }
     .l-section--secondary a:active, .l-section--secondary a:focus, .l-section--secondary a:hover {
-      color: #b7d091;
+      color: white;
       outline: none; }
   .l-section--secondary h1, .l-section--secondary h2, .l-section--secondary h3, .l-section--secondary h4, .l-section--secondary h5, .l-section--secondary h6 {
     color: #fff; }
@@ -714,21 +714,20 @@ hr {
       grid-column: span 6; } }
 
 .l-long {
-  grid-column: span 8; }
-  @media (max-width: 1080px) {
-    .l-long {
-      grid-column: span 12; } }
+  grid-column: span 12; }
 
 .header {
-  padding-top: 12em;
-  height: 100vh;
+  padding-top: 7em;
+  height: 800px;
+  background: #edfbff;
+  background: linear-gradient(90deg, #edfbff 0%, #f2e9ff 100%);
   text-align: center; }
-  @media (max-width: 1080px) {
-    .header {
-      padding-top: 20em; } }
   .header .header__logo {
-    height: 150px;
-    margin-right: 2em; }
+    height: 400px;
+    transition: 0.5s; }
+    .header .header__logo:hover {
+      transform: scale(1.1);
+      transition: 0.5s; }
     @media (max-width: 1080px) {
       .header .header__logo {
         margin-right: 1em;
@@ -754,8 +753,9 @@ hr {
   position: fixed;
   top: 0;
   z-index: 1000;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.1); }
+  background: #cfb0fb;
+  background: linear-gradient(90deg, #cfb0fb 0%, #a2e9fa 100%);
+  text-align: center; }
   #navbar a {
     color: white;
     text-transform: uppercase;
@@ -763,7 +763,8 @@ hr {
     height: 100%;
     font-size: 1.1em; }
     #navbar a:hover {
-      background-color: rgba(0, 0, 0, 0.3); }
+      background-color: rgba(0, 0, 0, 0.1);
+      transition: 0.5s; }
   @media (max-width: 1080px) {
     #navbar {
       display: none; } }
@@ -842,18 +843,16 @@ img.small-icon {
       width: 70px; } }
 
 h1 {
-  font-family: 'Grand Hotel', cursive;
+  font-family: 'Brittany Signature', cursive;
   font-size: 9em;
   font-weight: lighter;
   color: black;
   text-align: center; }
 
-#how-to {
-  background: rgba(0, 0, 0, 0.1); }
-
 #how-to-nav {
   display: flex;
-  justify-content: center; }
+  justify-content: space-evenly;
+  list-style-type: none; }
   #how-to-nav a {
     padding: .25em 1em .25em 0;
     font-size: 1.5em; }
@@ -870,7 +869,8 @@ h1 {
       height: auto; } }
 
 #intro {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("/images/closetbackground.jpg");
+  background: linear-gradient(rgba(113, 87, 121, 0.5), rgba(113, 87, 121, 0.9)), url("/images/closetbackground.jpg");
+  background-position: center;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -881,8 +881,13 @@ h1 {
     #intro {
       background-attachment: scroll; } }
 
+#features {
+  background: #edfbff;
+  background: linear-gradient(90deg, #edfbff 0%, #f2e9ff 100%); }
+
 .modules {
-  background-color: rgba(176, 243, 207, 0.3);
+  background: #a2e9fa;
+  background: linear-gradient(90deg, #a2e9fa 0%, rgba(162, 233, 250, 0.614551) 0%);
   padding: 4rem; }
 
 .module {
@@ -908,6 +913,11 @@ h1 {
 #pricing h1 {
   margin-bottom: .25em !important; }
 
+#pricing a {
+  color: #d767f7; }
+  #pricing a:active, #pricing a:focus, #pricing a:hover {
+    color: #29ccf3; }
+
 #contact {
   margin: 0 !important;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/spwebsite-bg.jpg");
@@ -917,11 +927,6 @@ h1 {
   color: white;
   display: flex;
   flex-direction: column; }
-  #contact a {
-    color: #ABA5DA;
-    padding: 0 .25em; }
-    #contact a:hover {
-      color: #8981CB; }
   @media (max-width: 1080px) {
     #contact {
       background-attachment: scroll; } }
@@ -938,11 +943,12 @@ h1 {
 .install {
   margin: 2rem;
   padding: 1rem;
-  background-color: #5aa77e;
-  border: 0; }
+  background-color: #087a95;
+  border: 0;
+  transition: 0.3s; }
 
 .install:hover {
-  background-color: #488765; }
+  background-color: #055265; }
 
 .space-between {
   justify-content: space-between; }
